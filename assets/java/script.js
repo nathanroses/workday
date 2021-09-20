@@ -1,9 +1,10 @@
+
+ //STORE TASK UPON SAVE CLICK
+ $(document).ready(function () {
 //START OF SCRIPT
 var currentDay = moment().format('MMMM Do YYYY, h:mm:ss a');
 $("#currentDay").html(currentDay);
 
- //STORE TASK UPON SAVE CLICK
- $(document).ready(function () {
     $(".saveBtn").on("click", function () {
         var text = $(this).siblings("description").val();
         var time = $(this).parent().attr("id");
