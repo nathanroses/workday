@@ -15,7 +15,13 @@ $(document).ready(function () {
          //time loop
          $(".time-block").each(function () {
              //select time
-             var timeSelected
+             var timeSelected = preseInt($(this).attr("id").split("hr")[6]);
+             //checks time
+             if (timeSelected < currentTime) {
+                 $(this).removeClass("future");
+                 $(this).removeClass("present");
+                 $(this).addClass("past");
+             }
          })
      }
 })
