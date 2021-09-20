@@ -15,7 +15,7 @@ var currentDay = moment()
   //Time Function If and Else Statements
      function timeScheduler() {
          //current time
-         var currentTime = moment().hour();
+         var currentTime = moment();
          //time loop
          $(".time-block").each(function () {
              //select time
@@ -26,12 +26,14 @@ var currentDay = moment()
                  $(this).removeClass("present");
                  $(this).addClass("past");
              }
+
              else if (timeSelected === currentTime) {
-                 $(this).removeClass("future");
-                 $(this).removeClass("present");
-                 $(this).addClass("future")
-             }
-             else if (timeSelected === currentTime) {
+                $(this).removeClass("future");
+                $(this).removeClass("present");
+                $(this).addClass("future")
+            }
+
+             else {
                 $(this).removeClass("future");
                 $(this).removeClass("past");
                 $(this).addClass("present")
@@ -52,7 +54,7 @@ $("#hr.description").val(localStorage.getItem("hr6"));
 $("#hr.description").val(localStorage.getItem("hr7"));
 
 
-
+timeScheduler();
 
 
 })
