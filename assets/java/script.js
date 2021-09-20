@@ -22,6 +22,11 @@ $(document).ready(function () {
                  $(this).removeClass("present");
                  $(this).addClass("past");
              }
+             else if (timeSelected === currentTime) {
+                 $(this).removeClass("future");
+                 $(this).removeClass("present");
+                 $(this).
+             }
          })
      }
 })
