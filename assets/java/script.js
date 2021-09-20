@@ -1,14 +1,8 @@
 //START OF SCRIPT
-var currentDay = moment().format("MN DY YYYY");
+var currentDay = moment() 
 
-$(document).ready(function () {
-    $(".saveBtn").on("click", function () {
-        var text = $(this).siblings(".description").val();
-        var time = $(this).parent().attr("id");
 
-        localStorage.setItem(time, text);
-    })
-
+  //Time Function If and Else Statements
      function timeScheduler() {
          //current time
          var currentTime = moment().hour();
@@ -29,6 +23,16 @@ $(document).ready(function () {
              }
          })
      }
+
+ //Document To Store Description Upon Click
+$(document).ready(function () {
+    $(".saveBtn").on("click", function () {
+        var text = $(this).siblings(".description").val();
+        var time = $(this).parent().attr("id");
+
+        localStorage.setItem(time, text);
+    })
+
 })
 
 
