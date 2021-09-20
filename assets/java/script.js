@@ -1,5 +1,6 @@
 //START OF SCRIPT
-var currentDay = moment().calendar();
+var currentDay = moment().format('MMMM Do YYYY, h:mm:ss a');
+$("#currentDay").html(currentDay);
 
  //Document To Store Description Upon Click
  $(document).ready(function () {
