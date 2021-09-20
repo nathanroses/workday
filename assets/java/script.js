@@ -19,7 +19,7 @@ var currentDay = moment()
          //time loop
          $(".time-block").each(function () {
              //select time
-             var timeSelected = preseInt($(this).attr("id").split("hr")[6]);
+             var timeSelected = preseInt($(this).attr("id").split("hr")[1]);
              //checks time
              if (timeSelected < currentTime) {
                  $(this).removeClass("future");
@@ -29,8 +29,13 @@ var currentDay = moment()
              else if (timeSelected === currentTime) {
                  $(this).removeClass("future");
                  $(this).removeClass("present");
-                 $(this).
+                 $(this).addClass("future")
              }
+             else if (timeSelected === currentTime) {
+                $(this).removeClass("future");
+                $(this).removeClass("past");
+                $(this).addClass("present")
+            }
          })
      }
 
