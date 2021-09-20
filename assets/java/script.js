@@ -2,7 +2,7 @@
 var currentDay = moment().format('MMMM Do YYYY, h:mm:ss a');
 $("#currentDay").html(currentDay);
 
- //Document To Store Description Upon Click
+ //STORE TASK UPON SAVE CLICK
  $(document).ready(function () {
     $(".saveBtn").on("click", function () {
         var text = $(this).siblings("description").val();
@@ -27,13 +27,13 @@ $("#currentDay").html(currentDay);
                  $(this).removeClass("present");
                  $(this).addClass("past");
              }
-
+            //checks if time selected is equal to current time
              else if (timeSelected === currentTime) {
                 $(this).removeClass("future");
                 $(this).removeClass("present");
                 $(this).addClass("future")
             }
-
+            //removes both past and future makes task present
              else {
                 $(this).removeClass("future");
                 $(this).removeClass("past");
@@ -45,7 +45,7 @@ $("#currentDay").html(currentDay);
 
 
 
-//STORAGE OF DATA INPUTED MIDDLE
+//STORAGE OF DATA ID INPUTED (8AM-8PM)
 $("#hr1.description").val(localStorage.getItem("hr1"));
 $("#hr2.description").val(localStorage.getItem("hr2"));
 $("#hr3.description").val(localStorage.getItem("hr3"));
@@ -65,3 +65,5 @@ timeScheduler();
 
 
 })
+
+//END OF SCRIPT
