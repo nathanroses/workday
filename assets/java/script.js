@@ -38,10 +38,10 @@ $(document).ready(function () {
 
 
 //STORAGE OF DATA INPUTED MIDDLE
-$("#hr6.description").val(localStorage.getItem("hr6"));
-$("#hr7.description").val(localStorage.getItem("hr7"));
 $("#hr8.description").val(localStorage.getItem("hr8"));
 $("#hr9.description").val(localStorage.getItem("hr9"));
 $("#hr10.description").val(localStorage.getItem("hr10"));
 $("#hr11.description").val(localStorage.getItem("hr11"));
 $("#hr12.description").val(localStorage.getItem("hr12"));
+$("#hr.description").val(localStorage.getItem("hr"));
+$("#hr.description").val(localStorage.getItem("hr"));
