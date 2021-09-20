@@ -15,7 +15,7 @@ var currentDay = moment().calendar();
   //Time Function If and Else Statements
      function timeScheduler() {
          //current time
-         var currentTime = moment();
+         var currentTime = moment().format('LTS');
          //time loop
          $(".time-block").each(function () {
              //select time
@@ -45,13 +45,19 @@ var currentDay = moment().calendar();
 
 
 //STORAGE OF DATA INPUTED MIDDLE
-$("#hr8.description").val(localStorage.getItem("hr1"));
-$("#hr9.description").val(localStorage.getItem("hr2"));
-$("#hr10.description").val(localStorage.getItem("hr3"));
-$("#hr11.description").val(localStorage.getItem("hr4"));
-$("#hr12.description").val(localStorage.getItem("hr5"));
-$("#hr.description").val(localStorage.getItem("hr6"));
-$("#hr.description").val(localStorage.getItem("hr7"));
+$("#hr1.description").val(localStorage.getItem("hr1"));
+$("#hr2.description").val(localStorage.getItem("hr2"));
+$("#hr3.description").val(localStorage.getItem("hr3"));
+$("#hr4.description").val(localStorage.getItem("hr4"));
+$("#hr5.description").val(localStorage.getItem("hr5"));
+$("#hr6.description").val(localStorage.getItem("hr6"));
+$("#hr7.description").val(localStorage.getItem("hr7"));
+$("#hr8.description").val(localStorage.getItem("hr8"));
+$("#hr9.description").val(localStorage.getItem("hr9"));
+$("#hr10.description").val(localStorage.getItem("hr10"));
+$("#hr11.description").val(localStorage.getItem("hr11"));
+$("#hr12.description").val(localStorage.getItem("hr12"));
+$("#hr13.description").val(localStorage.getItem("hr13"));
 
 
 timeScheduler();
