@@ -4,7 +4,7 @@ $("#currentDay").html(currentDay);
 
  //Document To Store Description Upon Click
  $(document).ready(function () {
-    $(".saveBtn").(onclick , function () {
+    $(".saveBtn").on("click", function () {
         var text = $(this).siblings("description").val();
         var time = $(this).parent().attr("id");
 
