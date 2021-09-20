@@ -1,15 +1,18 @@
-
- //STORE TASK UPON SAVE CLICK
- $(document).ready(function () {
-//START OF SCRIPT
+//VARIABLE
 var currentDay = moment().format('MMMM Do YYYY, h:mm:ss a');
+
+//START OF SCRIPT
+
+//STORE TASK UPON SAVE CLICK
+ $(document).ready(function () {
+
 $("#currentDay").html(currentDay);
 
     $(".saveBtn").on("click", function () {
         var text = $(this).siblings("description").val();
         var time = $(this).parent().attr("id");
 
-        localStorage.setItem (time,text);
+        localStorage.setItem (text);
     })
 
 
