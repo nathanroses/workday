@@ -1,14 +1,16 @@
+
 //VARIABLE
 var currentDay = moment().format('MMMM Do YYYY, h:mm:ss a');
-
+var currentTime = moment().format('LTS');
 //START OF SCRIPT
-
-//STORE TASK UPON SAVE CLICK
- $(document).ready(function () {
 
 $("#currentDay").html(currentDay);
 
-    $(".saveBtn").on("click", function () {
+//STORE TASK UPON SAVE CLICK
+$(document).ready(function () {
+
+
+    $('.save-container').on("click", function () {
         var text = $(this).siblings("description").val();
         var time = $(this).parent().attr("id");
 
@@ -35,13 +37,13 @@ $("#currentDay").html(currentDay);
              else if (timeSelected === currentTime) {
                 $(this).removeClass("future");
                 $(this).removeClass("present");
-                $(this).addClass("future")
+                $(this).addClass("future");
             }
             //removes both past and future makes task present
              else {
                 $(this).removeClass("future");
                 $(this).removeClass("past");
-                $(this).addClass("present")
+                $(this).addClass("present");
             }
          })
      }
